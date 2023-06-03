@@ -1,0 +1,3 @@
+java.util.Calendar usa o padrão de construção factory, que permite criar objetos sem esepecificar o seu tipo.
+Implementa também o padrão singleton que permite criar apenas um objeto Calendar e isto é feito através do método getInstance() que retorna uma instância de Calendar.
+Por fim, ainda usa o padrão strategy que permite usar diferentes sistemas de calendários. 
