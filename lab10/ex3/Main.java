@@ -1,19 +1,31 @@
-package ex3;
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class Main {
     public static void main(String[] args) {
-        Mediator trafficControl = new Mediator();
+        Collection<String> list = new ArrayList<>();
+        CommandInvoker invoker = new CommandInvoker();
 
-        Airplane airplane1 = new Airplane("Airplane 1", trafficControl);
-        Airplane airplane2 = new Airplane("Airplane 2", trafficControl);
-        Airplane airplane3 = new Airplane("Airplane 3", trafficControl);
+        Command add1 = new AddCommand<>(list, "Hello World");
+        Command add2 = new AddCommand<>(list, "Ola Mundo");
+        
+        invoker.setCommand(add1);
+        invoker.executeCommand();
+        invoker.setCommand(add2);     
+        invoker.executeCommand();
 
-        trafficControl.registerAirplane(airplane1);
-        trafficControl.registerAirplane(airplane2);
-        trafficControl.registerAirplane(airplane3);
+        System.out.println("List after adding two elements:");
+        for (String s : list) {
+            System.out.println(s);
+        }
 
-        airplane1.sendMessage("Sou o avião 1 e quero aterrar");
-        airplane2.sendMessage("Sou o avião 2 e quero aterrar");
+        invoker.undoCommand();
+        System.out.println("\nList after undoing the last command:");
+        for (String s : list) {
+            System.out.println(s);
+        }
+
     }
-    
 }
+
+

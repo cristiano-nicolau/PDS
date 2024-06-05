@@ -1,5 +1,0 @@
-ex3:
-
-Used memory inicial: 131 MB
-
-Used memory final: 134  MB

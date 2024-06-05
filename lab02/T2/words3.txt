@@ -1,1 +1,0 @@
-lisboa,porto,aveiro,praia,ovar,coimbra;saopaulo

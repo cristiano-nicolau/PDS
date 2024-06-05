@@ -1,0 +1,22 @@
+magazine pretende disponibilizar listagem de caracteristicas de pcs. Caracteristicas nome do computador, processador, armazenamento, memoria ram e preco são obrigatorias. Caracteristicas ecra, placa grafica, camara, bateria e peso opcionais. Listagem pode ser ordenada por nome do computador, preco do computador ou nome do processador e são disponibilizados 2 algoritmos de ordenação (insertion sort e bubble sort)
+Criar um programa e criar programa de teste.
+a) Criar as classes:
+Processador(modelo, frequencia e cache), dispositivos de memória(tipo e tamanho) e dispositivos de armazenamento(tipo de armazenamento e tamanho)
+Computador(nome, processador, memória, armazenamento, preco), podendo incluir as opcionais monitor tamanho e peso. Cada opcional deve ser representada por string
+Usar padrão adequado - (BUILDER)
+Revista constituída por 1 colecao de computadores disponiveis para venda.
+Enumeracao com os tipos de dispositivos de armazenamento
+(vale 10)
+
+b)Completar o programa para permitir adicionar um numero variavel de interfaces e dispositvos de comunicacao, como caracteristicas de um computador (4)
+
+output esperado:
+Computador - Apple Macbook Air,
+Processador [modelo=Intel Core i7 Dual Core, frequencia=1.6GHz, cache=3MB] ,
+Armazenamento [tipo=SSD, tamanho=128GB] ,
+RAM [tipo=LPDDR3-1600, tamnho=8GB] ,
+monitor=13 " ,
+tamanho=13 " ,
+peso=1.35,
+interfaces= 2x USB 3.1; HDMI; JACK 3, 5mm (Combo) ;
+preço=1159.0;

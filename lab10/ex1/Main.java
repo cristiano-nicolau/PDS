@@ -1,38 +1,57 @@
-package lab10.ex1;
+package ex1;
+
+import java.util.ListIterator;
+import java.util.Iterator;
 
 public class Main {
+
     public static void main(String[] args) {
-        Product p1 = new Product(10);
-        p1.setDisc("Product 1- vw golf de 99");
-        Product p2 = new Product(20);
-        p2.setDisc("Product 2- ferrari azul");
-        Product p3 = new Product(30);
-        p3.setDisc("Product 3- iphone barato");
+        //test iterator
+        VectorGeneric<String> v = new VectorGeneric<String>();
+        v.addElem("a");
+        v.addElem("b");
+        v.addElem("c");
+        v.addElem("d");
+        v.addElem("e");
+        v.addElem("f");
+        v.addElem("g");
+        v.addElem("h");
+        v.addElem("i");
+        v.addElem("j");
+
+        System.out.println("Removing element a...");
+        v.removeElem("a");
+        System.out.println("Get total elemets and get element 0");
+        System.out.println("Total elements: " + v.totalElem());
+        System.out.println("The element 0 is" + v.getElem(0));
+    
+
+        System.out.println("\n");
+        //test iterator
+
+        Iterator<String> it = v.iterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
+        }
+
+        System.out.println("Iterator does not support remove, set and add methods");
 
 
-        Client c1 = new Client("Client 1");
-        Client c2 = new Client("Client 2");
-        Client c3 = new Client("Client 3");
+        ListIterator<String> it2 = v.listIterator();
+        while(it2.hasNext()){
+            System.out.println(it2.next());
+        }
+        
+        System.out.println("\n");
 
-        Manager m = new Manager("Manager");
-
-        m.addProduct(p1);
-        m.addProduct(p2);
-        m.addProduct(p3);
-   
-
-        m.startAuction(p1, 10);
-        m.startAuction(p2, 10);
-        m.startAuction(p3, 10);
-
-        p1.addOberserver(c1);
-        c1.bid(p1, 15);
-        p2.addOberserver(c2);
-        c2.bid(p2, 5);
-        p3.addOberserver(c3);
-        c3.bid(p3, 50);
-
-
-
+        while(it2.hasPrevious()){
+            System.out.println(it2.previous());
+        }
+        it2.nextIndex();
+        it2.previousIndex();
+        System.out.println("ListIterator does not support remove, set and add methods");
     }
 }
+
+
+    
